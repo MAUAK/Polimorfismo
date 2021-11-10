@@ -37,9 +37,11 @@ namespace Polimorfismo
                 {
                     //Pedindo a taxa do produto e guardando ela em uma variavel
                     Console.Write("Taxa: ");
-                    double taxa = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);                    
+                    double taxa = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    //Colocando o valor total com o calculo da taxa em uma variavel
+                    double valortotaltaxa = preco + (preco * (taxa/100));
                     //Adicionando na lista esta forma com seus valores
-                    list.Add(new ProdutoImportado(nome, preco, taxa));
+                    list.Add(new ProdutoImportado(nome, preco, taxa, valortotaltaxa));
                 }
                 //Veificando se é comum
                 else if (ch == 'C')

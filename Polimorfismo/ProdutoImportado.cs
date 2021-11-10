@@ -9,14 +9,17 @@ namespace Polimorfismo
     {
         //Criando a variavel para a taxa e fazendo o encapsulamento
         public double Taxa { get; set; }
+        //Criando a variavel para a taxa e fazendo o encapsulamento
+        public double ValorTotalTaxa { get; set; }
 
         //Criando um construtor e colocando os valores certos nele
-        public ProdutoImportado(string nome, double preco, double taxa) : base (nome, preco)
+        public ProdutoImportado(string nome, double preco, double taxa, double valortotaltaxa) : base (nome, preco)
         {
             //Igualando os valores das variaveies do produto com a do construtor
             Nome = nome;
             Preco = preco;
             Taxa = taxa;
+            ValorTotalTaxa = valortotaltaxa;
         }
 
         /*public void precoTotal()
@@ -28,7 +31,7 @@ namespace Polimorfismo
         //Criando o método para reescrever os valores do produto importado
         public override string etiquetaProduto()
         {
-            return Nome + " - R$ " + Preco + " (Taxa: " + Taxa + ")";
+            return Nome + " - R$ " + Preco + " (Taxa: " + Taxa + ")" + " - Valor total com a taxa = R$ " + ValorTotalTaxa;
         }
     }
 }
